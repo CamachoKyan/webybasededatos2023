@@ -6,20 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 1 JavaScript(JQuery)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <div class="container">
-    <h1>Juego de los pares</h1><hr>
-    <div class="row">
-        <div class="col-3"><img src="BG.jpg" class="img-fluid" data-id="Inu.png"></div>
-        <div class="col-3"><img src="BG.jpg" class="img-fluid" data-id="Neko.png"></div>
-        <div class="col-3"><img src="BG.jpg" class="img-fluid" data-id="Inu.png"></div>
-        <div class="col-3"><img src="BG.jpg" class="img-fluid" data-id="Nekp.png"></div>
+    <h1>Juego De Los Pares</h1>
+    <h2>N° De Pares</h2><span id="total_pares">0</span><hr>
+    <div class="row" id="Pares" style="width: 500px; height: 500px;  text-align: center;">
     </div>
 </div>
 
+
+    <script>
+        // Define la función para mezclar la lista de archivos
+        function mezclarListaArchivos() {
+            // Define la lista de archivos .png
+            const archivos = [
+                'Mob1.png',
+                'Mob2.png',
+                'Mob3.png',
+                'Mob4.png',
+                'Mob5.png',
+                'Mob6.png',
+                'Mob7.png',
+                'Mob8.png',
+                'Mob1.png',
+                'Mob2.png',
+                'Mob3.png',
+                'Mob4.png',
+                'Mob5.png',
+                'Mob6.png',
+                'Mob7.png',
+                'Mob8.png',
+            ];
+
+            // Crea una copia de la lista original para no modificarla directamente
+            const listaMezclada = [...archivos];
+
+            // Aplica el algoritmo de Fisher-Yates para mezclar aleatoriamente la lista
+            for (let i = listaMezclada.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [listaMezclada[i], listaMezclada[j]] = [listaMezclada[j], listaMezclada[i]];
+            }
+
+            return listaMezclada;
+        }
+
+        // Define la función para crear elementos HTML con la lista mezclada
+        function crearElementosHTML(listaMezclada) {
+            const contenedor = document.getElementById('Pares'); // Reemplaza 'contenedor' con el ID de tu contenedor HTML
+
+            // Limpia cualquier contenido previo en el contenedor
+            contenedor.innerHTML = '';
+
+            // Itera sobre la lista mezclada y crea los elementos HTML
+            for (let i = 0; i < listaMezclada.length; i++) {
+                const div = document.createElement('div');
+                div.className = 'col-3';
+
+                const img = document.createElement('img');
+                img.src = 'Imagenes/Craft.png';
+                img.className = 'img-fluid';
+                img.setAttribute('data-id', listaMezclada[i]);
+                img.setAttribute('data-estado', '0');
+
+                div.appendChild(img);
+                contenedor.appendChild(div);
+            }
+        }
+
+        // Llama a la función para crear los elementos HTML con la lista mezclada
+        const listaMezclada = mezclarListaArchivos();
+        crearElementosHTML(listaMezclada);
+    </script>
+    
     <script src="JS/practica3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 </body>
