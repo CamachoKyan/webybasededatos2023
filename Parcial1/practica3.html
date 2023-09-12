@@ -12,7 +12,7 @@
 <div class="container">
     <h1>Juego De Los Pares</h1>
     <h2>N° De Pares</h2><span id="total_pares">0</span><hr>
-    <div class="row" id="Pares" style="width: 500px; height: 500px;  text-align: center;">
+    <div id="Pares" style="width: 500px; height: 500px;  text-align: center; margin: 30px;">
     </div>
 </div>
 
@@ -52,32 +52,44 @@
             return listaMezclada;
         }
 
-        // Define la función para crear elementos HTML con la lista mezclada
-        function crearElementosHTML(listaMezclada) {
-            const contenedor = document.getElementById('Pares'); // Reemplaza 'contenedor' con el ID de tu contenedor HTML
+       function crearElementosHTML(listaMezclada) {
+    const contenedor = document.getElementById('Pares'); // Reemplaza 'contenedor' con el ID de tu contenedor HTML
 
-            // Limpia cualquier contenido previo en el contenedor
-            contenedor.innerHTML = '';
+    // Limpia cualquier contenido previo en el contenedor
+    contenedor.innerHTML = '';
 
-            // Itera sobre la lista mezclada y crea los elementos HTML
-            for (let i = 0; i < listaMezclada.length; i++) {
-                const div = document.createElement('div');
-                div.className = 'col-3';
+    // Especifica cuántas columnas debe haber en cada fila
+    const columnasPorFila = 4;
 
-                const img = document.createElement('img');
-                img.src = 'Imagenes/Craft.png';
-                img.className = 'img-fluid';
-                img.setAttribute('data-id', listaMezclada[i]);
-                img.setAttribute('data-estado', '0');
+    for (let i = 0; i < listaMezclada.length; i += columnasPorFila) {
+        // Crea un nuevo div con clase "row" para cada fila
+        const fila = document.createElement('div');
+        fila.className = 'row';
 
-                div.appendChild(img);
-                contenedor.appendChild(div);
-            }
+        for (let j = i; j < i + columnasPorFila && j < listaMezclada.length; j++) {
+            // Crea un nuevo div con clase "col-3" para cada columna
+            const div = document.createElement('div');
+            div.className = 'col-3';
+
+            const img = document.createElement('img');
+            img.src = 'Imagenes/Craft.png';
+            img.className = 'img-fluid';
+            img.setAttribute('data-id', listaMezclada[j]);
+            img.setAttribute('data-estado', '0');
+
+            div.appendChild(img);
+            fila.appendChild(div);
         }
 
-        // Llama a la función para crear los elementos HTML con la lista mezclada
-        const listaMezclada = mezclarListaArchivos();
-        crearElementosHTML(listaMezclada);
+        // Agrega la fila al contenedor principal
+        contenedor.appendChild(fila);
+    }
+}
+
+// Llama a la función para crear los elementos HTML con la lista mezclada
+const listaMezclada = mezclarListaArchivos();
+crearElementosHTML(listaMezclada);
+
     </script>
     
     <script src="JS/practica3.js"></script>
