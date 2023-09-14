@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cuadrícula de 10x10</title>
+    <style>
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+}
+
+.arriba, .abajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Cambia 'left' por 'flex-start' para alinear arriba */
+
+    width: 50px; /* Ancho de cada columna izquierda y derecha */
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambia 'right' por 'flex-end' para alinear abajo */
+
+    width: 50px; /* Ancho de cada columna izquierda y derecha */
+}
+
+.casilla {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    margin: 5px; /* Espacio entre las casillas */
+}
+
+
+  </style>
+        
+</head>
+<body>
+    <div class="contenedor">
+        <div class="arriba">
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+        </div>
+        
+        <div class="izquierda">
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+        </div>
+        
+        <div class="derecha">
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+        </div>
+        
+        <div class="abajo">
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+            <div class="casilla"></div>
+        </div>
+    </div>
+    
+        
+        <!-- Repite 9 veces para crear las filas restantes -->
+    </div>
+</body>
+</html>
