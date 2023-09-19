@@ -1,111 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Cuadrícula de 10x10</title>
+    <title>Divs con Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 400px; /* Ajusta la altura según tus necesidades */
-}
-
-.arriba, .abajo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.izquierda {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Cambia 'left' por 'flex-start' para alinear arriba */
-
-    width: 50px; /* Ancho de cada columna izquierda y derecha */
-}
-
-.derecha {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Cambia 'right' por 'flex-end' para alinear abajo */
-
-    width: 50px; /* Ancho de cada columna izquierda y derecha */
-}
-
-.casilla {
-    width: 50px;
-    height: 50px;
-    background-color: lightblue;
-    border: 1px solid #ccc;
-    margin: 5px; /* Espacio entre las casillas */
-}
-
-
-  </style>
+        .Casillas{
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        .col-md-4{
+            margin-left: -15px;
         
+        }
+    </style>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="arriba">
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
+    <div class="container">
+        <div class="row">
+          
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            
         </div>
-        
-        <div class="izquierda">
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
+        <div class="row">
+            <div class="col-md-4" style="margin-right: 175px;">
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+                <div class="Casillas"></div>
+            </div>
         </div>
-        
-        <div class="derecha">
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-        </div>
-        
-        <div class="abajo">
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
-            <div class="casilla"></div>
+        <div class="row">
+           
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
+            <div class="Casillas"></div>
         </div>
     </div>
     
-        
-        <!-- Repite 9 veces para crear las filas restantes -->
-    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
