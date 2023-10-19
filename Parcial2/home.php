@@ -20,23 +20,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-lg-5">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-light" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-light" href="#"></a>
+                </li>
+            </ul>
+        </div>
          
         </div>
     </div>
 </nav>
-    <?php include 'menu.php'; ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Bienvenido al sistema de gestión de palomas</h2>
-                <img src="" alt="">
-            </div>
-        </div>
-    </div>
-
-    <footer class="text-center">
-        CETIS 107 &copy; 2023 
-    </footer>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 </body>
