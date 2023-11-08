@@ -14,16 +14,16 @@
         <div class="row">
             <div class="col-12 card p-4">
                 <div class="form-group">
-                    <form action="">
+                    <form action="GuardarMateria.php" method="POST">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" name="nombre" placeholder="Teclea la materia">
-                    </form>
+                    
                 </div>
                 <div class="form-group">
-                    <form action="">
+                    
                         <label for="semestre">Semestre:</label>
                         <input type="number" class="form-control" name="semestre" placeholder="Teclea el semestre">
-                    </form>
+                    
                 </div>
                 <div class="form-group">
                    <select name="especialidad" class="form-control">
@@ -36,9 +36,10 @@
                    </select>
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-primary" value="Registrar">
+                    <input type="submit" class="btn btn-primary" value="Registrar1">
                     <a href="ConsultarMateria.php" class="btn btn-danger">Cancelar</a>
                 </div>
+                </form>
             </div>
         </div>
     </div>
