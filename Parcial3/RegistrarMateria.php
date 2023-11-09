@@ -36,7 +36,7 @@
                    </select>
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-primary" value="Registrar1">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
                     <a href="ConsultarMateria.php" class="btn btn-danger">Cancelar</a>
                 </div>
                 </form>
